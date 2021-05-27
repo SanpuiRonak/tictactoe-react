@@ -1,0 +1,12 @@
+.cell {
+  background-color: aqua;
+  --dimension: 25vmin;
+  height: var(--dimension);
+  width: var(--dimension);
+  border: 10px;
+  border-color: black;
+  float: left;
+}
+.table {
+  justify-self: center;
+}

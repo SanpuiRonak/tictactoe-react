@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/index.css";
+import "./index.css";
+import Table from "./components/table";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Cell />
+    <Table />
   </React.StrictMode>,
   document.getElementById("root")
 );
