@@ -1,5 +1,5 @@
 function Status(props) {
-  return <span className="">props.msg</span>;
+  return <span className="status">{props.msg}</span>;
 }
 
 export default Status;

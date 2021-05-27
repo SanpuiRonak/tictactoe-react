@@ -1,5 +1,4 @@
 .cell {
-  background-color: aqua;
   --dimension: 25vmin;
   height: var(--dimension);
   width: var(--dimension);
@@ -9,4 +8,10 @@
 }
 .table {
   justify-self: center;
+  background-image: url("./resources/grid.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: contain;
+}
+.status {
 }

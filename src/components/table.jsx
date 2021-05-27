@@ -1,6 +1,6 @@
 import "../style.css";
 import Cell from "./cell";
-
+import Status from "./status";
 import React, { Component } from "react";
 
 class Table extends Component {
@@ -9,7 +9,7 @@ class Table extends Component {
     super(props);
     this.state = {
       squares: Array(9).fill(null),
-      turn: 0,
+      isXnext: false,
       p1Num: 0,
       p2Num: 0,
     };
@@ -30,7 +30,7 @@ class Table extends Component {
     if (winner) {
       messsage = `Winner :${winner}`;
     } else {
-      messsage = `Player =${this.state.this & 1 ? "O" : "X"}`;
+      messsage = `Player :${this.state.isXnext ? "O" : "X"}`;
     }
 
     return (
@@ -46,6 +46,8 @@ class Table extends Component {
         {this.renderCell(6)}
         {this.renderCell(7)}
         {this.renderCell(8)}
+        <br />
+        <Status msg={messsage}></Status>
       </div>
     );
   }
@@ -59,11 +61,11 @@ class Table extends Component {
     if (this.state.p1Num === 15) alert("p1");
     if (this.state.p2Num === 15) alert("p2");
 
-    if (this.state.turn & 1) {
+    if (this.state.isXnext) {
       newSquares[i] = "O";
       this.setState({
         squares: newSquares,
-        turn: this.state.turn + 1,
+        isXnext: !this.state.isXnext,
         p1Num: this.state.p2Num + this.magicSquare[i],
       });
       console.log("p1", this.state.p1Num);
@@ -71,7 +73,7 @@ class Table extends Component {
       newSquares[i] = "X";
       this.setState({
         squares: newSquares,
-        turn: this.state.turn + 1,
+        isXnext: !this.state.isXnext,
         p2Num: this.state.p2Num + this.magicSquare[i],
       });
       console.log("p2", this.state.p2Num);
@@ -80,14 +82,14 @@ class Table extends Component {
   calWinner() {
     let squares = this.state.squares;
     const lines = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6],
+      [0, 1, 2], //3
+      [3, 4, 5], //12
+      [6, 7, 8], //21
+      [0, 3, 6], //9
+      [1, 4, 7], //12
+      [2, 5, 8], //15
+      [0, 4, 8], //12
+      [2, 4, 6], //12
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
