@@ -30,7 +30,7 @@ class Cell extends Component {
           this.props.onClick();
         }}
       >
-        <img src={imgSrc} />
+        <img src={imgSrc} alt="" />
       </div>
     );
   }
