@@ -8,4 +8,5 @@ body {
   display: grid;
   place-items: center;
   grid-template-rows: 100vh;
+  text-align: center;
 }
