@@ -2,9 +2,8 @@
   --dimension: 25vmin;
   height: var(--dimension);
   width: var(--dimension);
-  border: 10px;
-  border-color: black;
   float: left;
+  /* background-color: aqua; */
 }
 .table {
   justify-self: center;
@@ -16,6 +15,10 @@
 .status {
   font-family: "Permanent Marker", cursive;
   font-size: 2em;
+  margin-top: 100px;
+  height: fit-content;
+  background-color: red;
+  margin: top 1000px;
 }
 
 .cell img {
@@ -24,4 +27,8 @@
   margin-right: auto;
   width: 60%;
   margin-top: 27%;
+}
+.separator {
+  height: 10%;
+  background-color: green;
 }
