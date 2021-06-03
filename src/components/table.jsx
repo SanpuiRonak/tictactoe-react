@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import slash from "../resources/slash.png";
 
 class Table extends Component {
+  slashMappings;
   constructor(props) {
     super(props);
     this.state = {
@@ -12,6 +13,16 @@ class Table extends Component {
       isXnext: false,
       winner: null,
     };
+    this.slashMappings = new Map([
+      [-1, "R1"],
+      [14, "R2"],
+      [47, "R3"],
+      [3, "C1"],
+      [10, "C2"],
+      [19, "C3"],
+      [8, "D1"],
+      [12, "D2"],
+    ]);
   }
   renderCell(i) {
     return (
@@ -31,10 +42,17 @@ class Table extends Component {
       messsage = `Player :${this.state.isXnext ? "O" : "X"}`;
     }
 
+    console.log();
+
     return (
       <div className="table">
-        {/* <img src={winner ? slash : ""} alt="ok" id="slash" /> */}
-        {/* <img src={slash} alt="ok" id="slash" /> */}
+        {/* <img
+          src={winnerDetails.winner ? slash : ""}
+          alt="ok"
+          id="slash"
+          className={this.slashMappings.get(winnerDetails.lineHash)}
+        /> */}
+        <img src={slash} alt="ok" id="slash" className="R1" />
         {this.renderCell(0)}
         {this.renderCell(1)}
         {this.renderCell(2)}
@@ -87,12 +105,13 @@ class Table extends Component {
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
+      // console.log(a + b * b - c);
       if (
         squares[a] &&
         squares[a] === squares[b] &&
         squares[a] === squares[c]
       ) {
-        return { winner: squares[a], line: lines[i] };
+        return { winner: squares[a], lineHash: a + b * b - c };
       }
     }
     return { winner: null, line: null };
