@@ -2,18 +2,16 @@ import "../style.css";
 import Cell from "./cell";
 import Status from "./status";
 import React, { Component } from "react";
+import slash from "../resources/slash.png";
 
 class Table extends Component {
-  magicSquare;
   constructor(props) {
     super(props);
     this.state = {
       squares: Array(9).fill(null),
       isXnext: false,
-      p1Num: 0,
-      p2Num: 0,
+      winner: null,
     };
-    this.magicSquare = [2, 7, 6, 9, 5, 1, 4, 5, 8];
   }
   renderCell(i) {
     return (
@@ -25,16 +23,18 @@ class Table extends Component {
   }
 
   render() {
-    const winner = this.calWinner(this.state.squares);
+    const winnerDetails = this.calWinner(this.state.squares);
     let messsage;
-    if (winner) {
-      messsage = `Winner :${winner}`;
+    if (winnerDetails.winner) {
+      messsage = `Winner :${winnerDetails.winner}`;
     } else {
       messsage = `Player :${this.state.isXnext ? "O" : "X"}`;
     }
 
     return (
       <div className="table">
+        {/* <img src={winner ? slash : ""} alt="ok" id="slash" /> */}
+        {/* <img src={slash} alt="ok" id="slash" /> */}
         {this.renderCell(0)}
         {this.renderCell(1)}
         {this.renderCell(2)}
@@ -55,28 +55,22 @@ class Table extends Component {
   clickHandler(i) {
     const newSquares = this.state.squares.slice();
 
-    if (newSquares[i] || this.calWinner(newSquares)) {
+    if (newSquares[i] || this.calWinner(newSquares).winner) {
       return;
     }
-    if (this.state.p1Num === 15) alert("p1");
-    if (this.state.p2Num === 15) alert("p2");
 
     if (this.state.isXnext) {
       newSquares[i] = "O";
       this.setState({
         squares: newSquares,
         isXnext: !this.state.isXnext,
-        p1Num: this.state.p2Num + this.magicSquare[i],
       });
-      console.log("p1", this.state.p1Num);
     } else {
       newSquares[i] = "X";
       this.setState({
         squares: newSquares,
         isXnext: !this.state.isXnext,
-        p2Num: this.state.p2Num + this.magicSquare[i],
       });
-      console.log("p2", this.state.p2Num);
     }
   }
   calWinner() {
@@ -98,10 +92,10 @@ class Table extends Component {
         squares[a] === squares[b] &&
         squares[a] === squares[c]
       ) {
-        return squares[a];
+        return { winner: squares[a], line: lines[i] };
       }
     }
-    return null;
+    return { winner: null, line: null };
   }
 }
 
