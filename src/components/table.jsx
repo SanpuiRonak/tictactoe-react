@@ -46,13 +46,12 @@ class Table extends Component {
 
     return (
       <div className="table">
-        {/* <img
+        <img
           src={winnerDetails.winner ? slash : ""}
-          alt="ok"
           id="slash"
           className={this.slashMappings.get(winnerDetails.lineHash)}
-        /> */}
-        <img src={slash} alt="ok" id="slash" className="R1" />
+        />
+        {/* <img src={slash} alt="ok" id="slash" className="D2" /> */}
         {this.renderCell(0)}
         {this.renderCell(1)}
         {this.renderCell(2)}

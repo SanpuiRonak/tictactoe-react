@@ -1,11 +1,15 @@
-.cell {
+:root {
   --dimension: 25vmin;
+}
+
+.cell {
   height: var(--dimension);
   width: var(--dimension);
   float: left;
   /* background-color: aqua; */
 }
 .table {
+  position: relative;
   justify-self: center;
   background-image: url("./resources/grid.svg");
   background-repeat: no-repeat, repeat;
@@ -31,4 +35,68 @@
 .separator {
   height: 10%;
   background-color: green;
+}
+
+.R1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: calc(2.3 * var(--dimension));
+}
+
+.R2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: calc(2.3 * var(--dimension));
+}
+
+.R3 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: calc(2.3 * var(--dimension));
+}
+
+.C1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
+  width: calc(2.3 * var(--dimension));
+}
+
+.C2 {
+  position: absolute;
+  top: 50%;
+  left: 19%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
+  width: calc(2.3 * var(--dimension));
+}
+
+.C3 {
+  position: absolute;
+  top: 50%;
+  left: 81%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
+  width: calc(2.3 * var(--dimension));
+}
+
+.D1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(45deg);
+  width: calc(3 * var(--dimension));
+}
+
+.D2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(-45deg);
+  width: calc(3 * var(--dimension));
 }
