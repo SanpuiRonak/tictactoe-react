@@ -15,6 +15,8 @@
   background-repeat: no-repeat, repeat;
   background-position: center;
   background-size: contain;
+  height: calc(3 * var(--dimension));
+  width: calc(3 * var(--dimension));
 }
 .status {
   font-family: "Permanent Marker", cursive;
@@ -61,7 +63,7 @@
   width: calc(2.3 * var(--dimension));
 }
 
-.C1 {
+.C2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -69,7 +71,7 @@
   width: calc(2.3 * var(--dimension));
 }
 
-.C2 {
+.C1 {
   position: absolute;
   top: 50%;
   left: 19%;
