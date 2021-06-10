@@ -99,3 +99,9 @@
   transform: translate(-50%, -50%) scale(1.5) rotate(-45deg);
   width: calc(3 * var(--dimension));
 }
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .table {
+    transform: translate(0%, -30%);
+  }
+}
