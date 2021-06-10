@@ -29,13 +29,8 @@
 
 .status {
   font-family: "Permanent Marker", cursive;
-  font-size: 2em;
-  margin-top: 100px;
-  height: fit-content;
-  background-color: red;
-  margin: top 1000px;
+  font-size: 3em;
 }
-
 .separator {
   height: 10%;
   background-color: green;
