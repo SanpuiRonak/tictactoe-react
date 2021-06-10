@@ -6,8 +6,16 @@
   height: var(--dimension);
   width: var(--dimension);
   float: left;
-  /* background-color: aqua; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.cell img {
+  width: 60%;
+}
+
 .table {
   position: relative;
   justify-self: center;
@@ -18,6 +26,7 @@
   height: calc(3 * var(--dimension));
   width: calc(3 * var(--dimension));
 }
+
 .status {
   font-family: "Permanent Marker", cursive;
   font-size: 2em;
@@ -27,13 +36,6 @@
   margin: top 1000px;
 }
 
-.cell img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  margin-top: 27%;
-}
 .separator {
   height: 10%;
   background-color: green;
@@ -41,7 +43,7 @@
 
 .R1 {
   position: absolute;
-  top: 20%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.5);
   width: calc(2.3 * var(--dimension));
@@ -57,9 +59,17 @@
 
 .R3 {
   position: absolute;
-  top: 80%;
+  top: 83%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.5);
+  width: calc(2.3 * var(--dimension));
+}
+
+.C1 {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
   width: calc(2.3 * var(--dimension));
 }
 
@@ -71,18 +81,10 @@
   width: calc(2.3 * var(--dimension));
 }
 
-.C1 {
-  position: absolute;
-  top: 50%;
-  left: 19%;
-  transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
-  width: calc(2.3 * var(--dimension));
-}
-
 .C3 {
   position: absolute;
   top: 50%;
-  left: 81%;
+  left: 83%;
   transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
   width: calc(2.3 * var(--dimension));
 }
