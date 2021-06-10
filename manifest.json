@@ -1,0 +1,8 @@
+{
+  "short_name": "TicTacToe",
+  "name": "Just anothe TicTacToe",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

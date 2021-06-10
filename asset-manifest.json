@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tictactoe-react/static/css/main.dae8ecfc.chunk.css",
+    "main.js": "/tictactoe-react/static/js/main.33931904.chunk.js",
+    "main.js.map": "/tictactoe-react/static/js/main.33931904.chunk.js.map",
+    "runtime-main.js": "/tictactoe-react/static/js/runtime-main.ecf0aab2.js",
+    "runtime-main.js.map": "/tictactoe-react/static/js/runtime-main.ecf0aab2.js.map",
+    "static/js/2.5e2e4f51.chunk.js": "/tictactoe-react/static/js/2.5e2e4f51.chunk.js",
+    "static/js/2.5e2e4f51.chunk.js.map": "/tictactoe-react/static/js/2.5e2e4f51.chunk.js.map",
+    "index.html": "/tictactoe-react/index.html",
+    "static/css/main.dae8ecfc.chunk.css.map": "/tictactoe-react/static/css/main.dae8ecfc.chunk.css.map",
+    "static/js/2.5e2e4f51.chunk.js.LICENSE.txt": "/tictactoe-react/static/js/2.5e2e4f51.chunk.js.LICENSE.txt",
+    "static/media/circle.f937d81d.png": "/tictactoe-react/static/media/circle.f937d81d.png",
+    "static/media/style.css": "/tictactoe-react/static/media/grid.8fad2db3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ecf0aab2.js",
+    "static/js/2.5e2e4f51.chunk.js",
+    "static/css/main.dae8ecfc.chunk.css",
+    "static/js/main.33931904.chunk.js"
+  ]
+}
